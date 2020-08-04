@@ -51,22 +51,19 @@ void MayMen()
 	srand(time(NULL));
 	numero_aleatorio=1+rand()%(999);
 	
-	
 	do
 	{
 		printf("\n\nIngrese un numero: ");
 		scanf("%d",&numero_ingresado);
 		if(numero_ingresado>numero_aleatorio)
 		{
-			printf("\nIntento: %d",intentos_falso);
+			printf("\nIntento %d: ",intentos_falso);
 			numero_mayor=numero_ingresado-1;
 			printf("\nEl numero secreto es mayor y se encuentra entre %d y %d",numero_mayor,numero_menor);
-			
-			
 		}
 		if(numero_ingresado<numero_aleatorio)
 		{
-			printf("\nIntento: %d",intentos_falso);
+			printf("\nIntento %d: ",intentos_falso);
 			numero_menor=numero_ingresado+1;
 			printf("\nEl numero secreto es menor y se encuentra entre %d y %d",numero_mayor,numero_menor);
 		}
@@ -86,8 +83,9 @@ void MayMen()
 			printf("\n\nNo acerto el numero ingresado ");
 			printf("\n\nEl numero aleatorio es: %d",numero_aleatorio);
 		}
-	
 }
+
+
 
 
 
