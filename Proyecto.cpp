@@ -107,6 +107,7 @@ main(){
   printf("%d", numero_aleatorio);
   
   system("pause");
+
 }
 
 
