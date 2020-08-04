@@ -42,15 +42,15 @@ main()
 
 void MayMen()
 {
-	int numero_aleatorio=0,intentos=11, numero_ingresado, numero_mayor, numero_menor;
+	int numero_aleatorio=0,intentos=11, numero_ingresado, numero_mayor=999, numero_menor=1;
 	printf("\n--Este juego consiste en adivinar un numero que esta entre 1 y 999 denominado numero secreto--");
 	printf("\n1. Itentos para encontrar el numero: 10");
 	printf("\n2. El puntaje obtenido depende de la cantidad de intentos");
 	printf("\n3. Al perder o ganar el juego se mostrara el numero secreto");
-	printf("\n4. Jugar");
 	
 	srand(time(NULL));
 	numero_aleatorio=1+rand()%(999);
+	
 	
 	do
 	{
@@ -58,21 +58,26 @@ void MayMen()
 		scanf("%d",&numero_ingresado);
 		if(numero_ingresado>numero_aleatorio)
 		{
-			printf("\nEl numero ingresado es mayor al aleatorio");
+			numero_mayor=numero_ingresado-1;
+			printf("El numero secreto es mayor y se encuentra entre %d y %d",numero_mayor,numero_menor);
+			
+			
 		}
 		if(numero_ingresado<numero_aleatorio)
 		{
-			printf("\nEl numero ingresado es menor al aleatorio");
+			numero_menor=numero_ingresado+1;
+			printf("El numero secreto es menor y se encuentra entre %d y %d",numero_mayor,numero_menor);
 		}
 		if(numero_ingresado==numero_aleatorio)
 		{
 			printf("\nEl numero ingresado es igual al aleatorio");
 		}
 			
-	intentos=intentos-1;	
+	intentos=intentos-1;
+		
 	}while(numero_ingresado==numero_aleatorio and intentos!=0);
 	
-	break;
+	
 	
 }
 
