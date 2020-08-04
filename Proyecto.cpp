@@ -85,6 +85,32 @@ void MayMen()
 		}
 }
 
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+void adivinium();
+
+main(){
+  int a, numero_aleatorio;
+   printf("\nIngrese un numero de 4 cifras: ");
+   scanf("%d", &a);
+  
+  if(a<1000 || a>9999){
+    
+    printf("\nPor favor ingrese un numero entre 1000 y 9999.\n");
+  }
+  else{
+       srand(time(NULL));
+       numero_aleatorio=1000+rand()%(9999);
+       }
+  printf("%d", numero_aleatorio);
+  
+  system("pause");
+}
+
+
+
 
 
 
